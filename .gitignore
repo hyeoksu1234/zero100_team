@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.vercel
+*.log
+*.swp
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.DS_Store
