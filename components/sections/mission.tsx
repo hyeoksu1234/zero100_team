@@ -2,19 +2,25 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/section-heading";
-import { missionContent } from "@/data/content";
+import { missionContent, type Language } from "@/data/content";
 
-export function MissionSection() {
+type MissionSectionProps = {
+  language: Language;
+};
+
+export function MissionSection({ language }: MissionSectionProps) {
+  const content = missionContent[language];
+
   return (
     <section id="mission">
       <div className="container">
         <SectionHeading
-          eyebrow="Our Mission"
-          title={missionContent.headline}
-          description="우리가 풀고자 하는 문제와 설계 철학을 세 가지 키워드로 요약합니다."
+          eyebrow={content.eyebrow}
+          title={content.headline}
+          description={content.description}
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {missionContent.statements.map((statement, index) => (
+          {content.statements.map((statement, index) => (
             <motion.article
               key={statement}
               initial={{ opacity: 0, y: 24 }}
@@ -34,4 +40,3 @@ export function MissionSection() {
     </section>
   );
 }
-

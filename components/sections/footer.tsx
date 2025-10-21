@@ -2,17 +2,21 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { footerLinks } from "@/data/content";
+import { footerContent, type Language } from "@/data/content";
 
-export function FooterSection() {
+type FooterSectionProps = {
+  language: Language;
+};
+
+export function FooterSection({ language }: FooterSectionProps) {
+  const content = footerContent[language];
+
   return (
     <footer className="border-t border-white/10 bg-black/40 py-12">
       <div className="container flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
           <h4 className="text-xl font-semibold">Project Palette</h4>
-          <p className="mt-2 text-sm text-white/60">
-            Calendar-first · Zero-input · Automation Builder Team
-          </p>
+          <p className="mt-2 text-sm text-white/60">{content.tagline}</p>
         </div>
 
         <motion.ul
@@ -21,7 +25,7 @@ export function FooterSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          {footerLinks.map((link) => (
+          {content.links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
@@ -39,4 +43,3 @@ export function FooterSection() {
     </footer>
   );
 }
-

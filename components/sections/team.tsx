@@ -3,19 +3,30 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
-import { teamMembers } from "@/data/content";
+import {
+  teamMembers,
+  teamSectionCopy,
+  type Language
+} from "@/data/content";
 
-export function TeamSection() {
+type TeamSectionProps = {
+  language: Language;
+};
+
+export function TeamSection({ language }: TeamSectionProps) {
+  const section = teamSectionCopy[language];
+  const members = teamMembers[language];
+
   return (
     <section id="team">
       <div className="container">
         <SectionHeading
-          eyebrow="Meet the Team"
-          title="실력 있는 빌더들이 캘린더 자동화를 현실로 만듭니다"
-          description="제품 설계, UX 엔지니어링, 자동화 아키텍처까지. 서로 다른 역량이 하나의 빌더톤 팀으로 모였습니다."
+          eyebrow={section.eyebrow}
+          title={section.title}
+          description={section.description}
         />
         <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {teamMembers.map((member, index) => (
+          {members.map((member, index) => (
             <motion.article
               key={member.name}
               initial={{ opacity: 0, y: 24 }}
@@ -70,4 +81,3 @@ export function TeamSection() {
     </section>
   );
 }
-

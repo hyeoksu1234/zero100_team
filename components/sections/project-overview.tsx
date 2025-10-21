@@ -2,16 +2,24 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/section-heading";
-import { projectOverview } from "@/data/content";
+import { projectOverview, type Language } from "@/data/content";
 
-export function ProjectOverviewSection() {
+type ProjectOverviewSectionProps = {
+  language: Language;
+};
+
+export function ProjectOverviewSection({
+  language
+}: ProjectOverviewSectionProps) {
+  const content = projectOverview[language];
+
   return (
     <section id="project">
       <div className="container">
         <SectionHeading
-          eyebrow="Project"
-          title={projectOverview.name}
-          description={projectOverview.summary}
+          eyebrow={content.eyebrow}
+          title={content.name}
+          description={content.summary}
           align="center"
         />
 
@@ -22,15 +30,15 @@ export function ProjectOverviewSection() {
           className="mx-auto mt-10 max-w-4xl rounded-[32px] border border-accent/30 bg-gradient-to-br from-accent/10 via-surface/70 to-surface/40 p-8 shadow-glow"
         >
           <h3 className="text-xl font-semibold text-accent-foreground">
-            왜 차별적인가?
+            {content.differentiatorHeading}
           </h3>
           <p className="mt-3 text-sm text-white/75">
-            {projectOverview.differentiator}
+            {content.differentiator}
           </p>
         </motion.div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {projectOverview.modules.map((module, index) => (
+          {content.modules.map((module, index) => (
             <motion.article
               key={module.name}
               initial={{ opacity: 0, y: 24 }}
@@ -53,4 +61,3 @@ export function ProjectOverviewSection() {
     </section>
   );
 }
-

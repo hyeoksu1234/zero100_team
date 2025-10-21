@@ -3,10 +3,22 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
-import { previousWorks } from "@/data/content";
+import {
+  previousWorkContent,
+  type Language
+} from "@/data/content";
 
-export function PreviousWorkSection() {
-  if (!previousWorks.length) {
+type PreviousWorkSectionProps = {
+  language: Language;
+};
+
+export function PreviousWorkSection({
+  language
+}: PreviousWorkSectionProps) {
+  const content = previousWorkContent[language];
+  const projects = content.projects;
+
+  if (!projects.length) {
     return null;
   }
 
@@ -14,12 +26,12 @@ export function PreviousWorkSection() {
     <section id="previous-work">
       <div className="container">
         <SectionHeading
-          eyebrow="Previous Work"
-          title="실행력으로 증명한 운영 자동화 사례"
-          description="졸업 전시 운영부터 브랜드 리디자인까지, 복잡한 캘린더 기반 워크플로를 자동화한 경험을 공유합니다."
+          eyebrow={content.eyebrow}
+          title={content.title}
+          description={content.description}
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {previousWorks.map((work, index) => (
+          {projects.map((work, index) => (
             <motion.article
               key={work.title}
               initial={{ opacity: 0, y: 24 }}
@@ -35,7 +47,7 @@ export function PreviousWorkSection() {
                   href={work.href}
                   className="mt-auto text-sm font-medium text-accent hover:text-accent-foreground"
                 >
-                  자세히 보기 →
+                  {content.ctaLabel}
                 </Link>
               ) : null}
             </motion.article>
@@ -45,4 +57,3 @@ export function PreviousWorkSection() {
     </section>
   );
 }
-
