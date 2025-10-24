@@ -146,27 +146,30 @@ export const teamMembers: Record<Language, TeamMember[]> = {
       ]
     },
     {
-      name: "Minji Park",
-      role: "UX 리드",
+      name: "Yoonsu Lee",
+      role: "AI 감성 UX 디자이너",
       focus:
-        "복잡한 데이터를 감정형 인터페이스와 워크플로 중심 UX로 번역합니다.",
-      technologies: ["Figma", "Tailwind CSS", "Framer Motion", "LLM UX"],
-      links: [
-        { label: "Behance", href: "https://behance.net/minjipark" },
-        { label: "GitHub", href: "https://github.com/minji" },
-        { label: "Figma", href: "https://www.figma.com/@minji" }
-      ]
+        "Emotion-driven UX와 Human-centered AI 연구를 바탕으로 공감형 인터페이스와 브랜드 상호작용을 설계합니다.",
+      technologies: [
+        "AI Sensitivity Design",
+        "Emotion-driven UX",
+        "Material Research",
+        "Brand Interaction"
+      ],
+      links: []
     },
     {
-      name: "Daniel Choi",
-      role: "데이터 & 자동화 엔지니어",
+      name: "Gayoung Joung",
+      role: "AI 네이티브 PM & 마케팅 빌더",
       focus:
-        "Ingest 파이프라인, 벡터 검색, BullMQ 기반 오토메이션 레이어를 구현합니다.",
-      technologies: ["Python", "Whisper", "BullMQ", "Qdrant"],
-      links: [
-        { label: "GitHub", href: "https://github.com/danielchoi" },
-        { label: "LinkedIn", href: "https://linkedin.com/in/danielchoi" }
-      ]
+        "글로벌 코빌딩 경험과 데이터 기반 마케팅 역량으로 AI-Native 접근법을 제품·프론트엔드·커뮤니케이션에 연결합니다.",
+      technologies: [
+        "Prompt Engineering",
+        "UI/UX",
+        "Data-driven Marketing",
+        "Frontend"
+      ],
+      links: []
     }
   ],
   en: [
@@ -183,27 +186,30 @@ export const teamMembers: Record<Language, TeamMember[]> = {
       ]
     },
     {
-      name: "Minji Park",
-      role: "UX Lead",
+      name: "Yoonsu Lee",
+      role: "AI Sensitivity UX Designer",
       focus:
-        "Transforms complex data into workflow-first, sentiment-friendly interfaces.",
-      technologies: ["Figma", "Tailwind CSS", "Framer Motion", "LLM UX"],
-      links: [
-        { label: "Behance", href: "https://behance.net/minjipark" },
-        { label: "GitHub", href: "https://github.com/minji" },
-        { label: "Figma", href: "https://www.figma.com/@minji" }
-      ]
+        "Designs empathetic interfaces and brand interactions grounded in emotion-driven UX and human-centered AI research.",
+      technologies: [
+        "AI Sensitivity Design",
+        "Emotion-driven UX",
+        "Material Research",
+        "Brand Interaction"
+      ],
+      links: []
     },
     {
-      name: "Daniel Choi",
-      role: "Data & Automation Engineer",
+      name: "Gayoung Joung",
+      role: "AI-native PM & Marketing Builder",
       focus:
-        "Builds the ingest pipeline, vector retrieval, and BullMQ-powered automation layer.",
-      technologies: ["Python", "Whisper", "BullMQ", "Qdrant"],
-      links: [
-        { label: "GitHub", href: "https://github.com/danielchoi" },
-        { label: "LinkedIn", href: "https://linkedin.com/in/danielchoi" }
-      ]
+        "Connects global co-building, outbound growth, and data-driven marketing to ship AI-native product, frontend, and communication experiences.",
+      technologies: [
+        "Prompt Engineering",
+        "UI/UX",
+        "Data-driven Marketing",
+        "Frontend"
+      ],
+      links: []
     }
   ]
 };
