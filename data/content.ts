@@ -39,42 +39,42 @@ export type HeroContent = {
 
 export const heroContent: Record<Language, HeroContent> = {
   ko: {
-    badge: "Project Palette",
-    subtitle: "캘린더 기반 자동화 & 블록 데이터 OS를 만드는 빌더팀",
+    badge: "Project Flow",
+    subtitle: "AI가 대화·문서·파일을 스스로 정리하는 업무 Copilot OS",
     description:
-      "1분 안에 계획하고, 말 한마디로 기록하며, 자동화로 삶을 정리하는 경험을 설계합니다. 운영진과 투자자, 멘토가 팀의 역량을 한눈에 이해하도록 구성했습니다.",
+      "모든 대화·문서·파일이 한 곳에 모이고, AI가 이를 자동 정리·분류·요약해 스타트업이 즉시 활용할 수 있는 AI 기반 업무 OS입니다.",
     ctas: [
-      { label: "지원서 보기", href: "https://bit.ly/project-palette-apply" },
-      { label: "포트폴리오 보기", href: "https://palette.notion.site" }
+      { label: "문의하기", href: "mailto:product@flow.ai" },
+      { label: "프로덕트 개요 보기", href: "#project" }
     ],
-    highlightLabel: "Calendar-first",
-    highlightTitle: "빌더를 위한 자동화",
+    highlightLabel: "AI Copilot",
+    highlightTitle: "Zero-overhead Work OS",
     highlightItems: [
-      "Zero-input 기록",
-      "Flow 자동화",
-      "Block 데이터 OS"
+      "모든 채널 데이터 자동 수집",
+      "AI 정리·분류·요약",
+      "실행 가능한 To-Do와 리포트"
     ],
-    highlightMetaPrimary: "AI 빌더톤 준비 완료",
-    highlightMetaSecondary: "반응형 · 다국어 지원 · 자동화 네이티브"
+    highlightMetaPrimary: "10인 이하 스타트업 팀을 위한 자율형 업무 보조",
+    highlightMetaSecondary: "한·영 지원 · Slack·Notion 연동 준비"
   },
   en: {
-    badge: "Project Palette",
-    subtitle: "Builder team crafting a calendar-based automation & block data OS",
+    badge: "Project Flow",
+    subtitle: "AI workplace copilot that keeps conversations, docs, and files organized.",
     description:
-      "We design experiences that plan in under a minute, capture with a single voice command, and organize life through automation so evaluators can grasp our capabilities instantly.",
+      "An AI-native work OS where every conversation, document, and file lands in one place, is auto-organized, summarized, and ready for startup teams to act on instantly.",
     ctas: [
-      { label: "View Application", href: "https://bit.ly/project-palette-apply" },
-      { label: "View Portfolio", href: "https://palette.notion.site" }
+      { label: "Contact Us", href: "mailto:product@flow.ai" },
+      { label: "Explore Product Overview", href: "#project" }
     ],
-    highlightLabel: "Calendar-first",
-    highlightTitle: "Automation for Builders",
+    highlightLabel: "AI Copilot",
+    highlightTitle: "Zero-overhead Work OS",
     highlightItems: [
-      "Zero-input logging",
-      "Flow automation",
-      "Block data OS"
+      "Unified data intake",
+      "Automated organization & summarization",
+      "Actionable To-Do and reporting"
     ],
-    highlightMetaPrimary: "AI Builderthon Ready",
-    highlightMetaSecondary: "Responsive · Multi-language Ready · Automation Native"
+    highlightMetaPrimary: "Designed for sub-10 member startup teams",
+    highlightMetaSecondary: "Bilingual experience · Slack & Notion ready"
   }
 };
 
@@ -87,23 +87,25 @@ export type MissionContent = {
 
 export const missionContent: Record<Language, MissionContent> = {
   ko: {
-    eyebrow: "팀 미션",
-    headline: "Calendar-first, Zero-input, Automation",
-    description: "우리가 풀고자 하는 문제와 설계 철학을 세 가지 키워드로 요약합니다.",
+    eyebrow: "프로젝트 미션",
+    headline: "AI가 알아서 정리하고 연결하는 업무 환경",
+    description:
+      "Project Flow가 해결하려는 핵심 문제와 설계 철학을 세 가지 진술로 정리했습니다.",
     statements: [
-      "캘린더를 중심으로 사람과 시스템을 연결하는 운영 자동화를 구현합니다.",
-      "입력 부담을 줄이는 Zero-Input 경험 설계로 높은 사용자 잔존을 유도합니다.",
-      "데이터 블록 OS를 구축해 팀과 개인의 워크플로를 일관된 구조로 정리합니다."
+      "Slack, Notion, Drive, 카톡, 이메일에 흩어진 정보를 하나의 컨텍스트 그래프로 통합합니다.",
+      "AI가 문서와 대화를 자동으로 정리·요약해 팀이 겪는 정리 부담을 제거합니다.",
+      "업무 맥락을 이해한 Copilot이 실행 가능한 인사이트와 로드맵을 지속적으로 제안합니다."
     ]
   },
   en: {
-    eyebrow: "Our Mission",
-    headline: "Calendar-first, Zero-input, Automation",
-    description: "We summarize the problem space and design philosophy in three statements.",
+    eyebrow: "Mission",
+    headline: "An AI workspace that organizes and connects itself",
+    description:
+      "We express the problems we tackle and our product philosophy in three statements.",
     statements: [
-      "We connect people with systems around the calendar to deliver operational automation.",
-      "Zero-input experience design removes friction and sustains user retention.",
-      "A block-based data OS keeps team and personal workflows aligned in a consistent structure."
+      "Unify fragmented Slack, Notion, Drive, chat, and email data into a single context graph.",
+      "Remove the burden of organizing by letting AI structure and summarize documents and conversations automatically.",
+      "Deliver continuous, actionable insights and roadmaps through a context-aware copilot."
     ]
   }
 };
@@ -117,15 +119,15 @@ export type SectionCopy = {
 export const teamSectionCopy: Record<Language, SectionCopy> = {
   ko: {
     eyebrow: "팀 소개",
-    title: "실력 있는 빌더들이 캘린더 자동화를 현실로 만듭니다",
+    title: "AI 업무 Copilot을 현실로 만드는 빌더팀",
     description:
-      "제품 설계, UX 엔지니어링, 자동화 아키텍처까지. 서로 다른 역량이 하나의 빌더톤 팀으로 모였습니다."
+      "데이터 아키텍처, LLM 오케스트레이션, 감성 UX를 결합해 자율형 업무 OS를 설계합니다."
   },
   en: {
-    eyebrow: "Meet the Team",
-    title: "Experienced builders bring calendar automation to life",
+    eyebrow: "Team",
+    title: "Builders shipping the AI workplace copilot",
     description:
-      "From product architecture to UX engineering and automation, complementary skills form one builderthon team."
+      "We combine data architecture, LLM orchestration, and empathetic UX to craft a self-organizing work OS."
   }
 };
 
@@ -133,10 +135,10 @@ export const teamMembers: Record<Language, TeamMember[]> = {
   ko: [
     {
       name: "Hyeok Su Lee",
-      role: "프로덕트 아키텍트",
+      role: "프로덕트 오너 & AI 전략",
       focus:
-        "생산성 자동화와 데이터 모델링을 설계하며, 전반적인 제품 방향성을 이끕니다.",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Notion API"],
+        "프로젝트 비전, 데이터 모델, AI 오케스트레이션 아키텍처를 설계하며 핵심 로드맵을 이끕니다.",
+      technologies: ["Next.js", "Supabase", "OpenAI API", "pgvector"],
       links: [
         { label: "LinkedIn", href: "https://linkedin.com/in/hyeoksu" },
         { label: "GitHub", href: "https://github.com/hyeoksu" },
@@ -145,9 +147,10 @@ export const teamMembers: Record<Language, TeamMember[]> = {
     },
     {
       name: "Minji Park",
-      role: "UX 엔지니어",
-      focus: "복잡한 워크플로를 직관적인 인터랙션과 감각적인 UI 모션으로 번역합니다.",
-      technologies: ["Framer Motion", "Figma", "Tailwind CSS", "Storybook"],
+      role: "UX 리드",
+      focus:
+        "복잡한 데이터를 감정형 인터페이스와 워크플로 중심 UX로 번역합니다.",
+      technologies: ["Figma", "Tailwind CSS", "Framer Motion", "LLM UX"],
       links: [
         { label: "Behance", href: "https://behance.net/minjipark" },
         { label: "GitHub", href: "https://github.com/minji" },
@@ -156,10 +159,10 @@ export const teamMembers: Record<Language, TeamMember[]> = {
     },
     {
       name: "Daniel Choi",
-      role: "자동화 엔지니어",
+      role: "데이터 & 자동화 엔지니어",
       focus:
-        "캘린더 시그널을 기반으로 음성 입력과 블록 데이터 엔진을 연결하고 자동화를 배포합니다.",
-      technologies: ["Python", "Supabase", "Temporal", "LLM Agents"],
+        "Ingest 파이프라인, 벡터 검색, BullMQ 기반 오토메이션 레이어를 구현합니다.",
+      technologies: ["Python", "Whisper", "BullMQ", "Qdrant"],
       links: [
         { label: "GitHub", href: "https://github.com/danielchoi" },
         { label: "LinkedIn", href: "https://linkedin.com/in/danielchoi" }
@@ -169,10 +172,10 @@ export const teamMembers: Record<Language, TeamMember[]> = {
   en: [
     {
       name: "Hyeok Su Lee",
-      role: "Product Architect",
+      role: "Product Owner & AI Strategist",
       focus:
-        "Designs productivity automation and data models while steering the overall product direction.",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Notion API"],
+        "Designs the product vision, data models, and AI orchestration architecture while steering the roadmap.",
+      technologies: ["Next.js", "Supabase", "OpenAI API", "pgvector"],
       links: [
         { label: "LinkedIn", href: "https://linkedin.com/in/hyeoksu" },
         { label: "GitHub", href: "https://github.com/hyeoksu" },
@@ -181,10 +184,10 @@ export const teamMembers: Record<Language, TeamMember[]> = {
     },
     {
       name: "Minji Park",
-      role: "UX Engineer",
+      role: "UX Lead",
       focus:
-        "Translates complex workflows into intuitive interactions and expressive UI motion.",
-      technologies: ["Framer Motion", "Figma", "Tailwind CSS", "Storybook"],
+        "Transforms complex data into workflow-first, sentiment-friendly interfaces.",
+      technologies: ["Figma", "Tailwind CSS", "Framer Motion", "LLM UX"],
       links: [
         { label: "Behance", href: "https://behance.net/minjipark" },
         { label: "GitHub", href: "https://github.com/minji" },
@@ -193,10 +196,10 @@ export const teamMembers: Record<Language, TeamMember[]> = {
     },
     {
       name: "Daniel Choi",
-      role: "Automation Engineer",
+      role: "Data & Automation Engineer",
       focus:
-        "Connects voice input and the block data engine with calendar signals to ship automation.",
-      technologies: ["Python", "Supabase", "Temporal", "LLM Agents"],
+        "Builds the ingest pipeline, vector retrieval, and BullMQ-powered automation layer.",
+      technologies: ["Python", "Whisper", "BullMQ", "Qdrant"],
       links: [
         { label: "GitHub", href: "https://github.com/danielchoi" },
         { label: "LinkedIn", href: "https://linkedin.com/in/danielchoi" }
@@ -216,64 +219,64 @@ export type ProjectOverviewContent = {
 
 export const projectOverview: Record<Language, ProjectOverviewContent> = {
   ko: {
-    eyebrow: "프로젝트",
-    name: "Project Palette",
+    eyebrow: "제품 개요",
+    name: "Project Flow",
     summary:
-      "캘린더 이벤트, 음성 입력, 자동화 레시피를 하나의 블록 데이터 OS로 통합해 업무 운영을 자동화하는 엔진입니다.",
-    differentiatorHeading: "왜 차별적인가?",
+      "대화·문서·파일을 자동 수집하고 AI가 정리·분류·요약해 팀이 즉시 실행할 수 있는 업무 OS입니다.",
+    differentiatorHeading: "Project Flow가 제공하는 차별점",
     differentiator:
-      "단순 UI 도구가 아닌, 시간 컨텍스트와 자동화를 기본으로 설계된 엔진으로 고도화한 반복 업무를 지원합니다.",
+      "지속적으로 학습하는 컨텍스트 그래프와 AI 자동화 엔진을 결합해 정리 부담 없이 실행 가능한 인사이트를 제공합니다.",
     modules: [
       {
-        name: "1MP (One-Minute Planner)",
+        name: "데이터 허브 & 자동 정리",
         description:
-          "음성 명령과 텍스트 입력을 결합해 1분 안에 계획을 자동 구성하고 캘린더에 배치합니다."
+          "Slack, Notion, Drive, 이메일을 수집하고 SHA-256과 SimHash로 중복을 관리하며 AI가 태깅과 구조화를 수행합니다."
       },
       {
-        name: "ZIC (Zero-Input Capture)",
+        name: "하이브리드 AI 검색",
         description:
-          "대화형 인터페이스를 통해 후속 정리가 필요 없는 캡처 경험을 제공합니다."
+          "BM25와 의미 검색을 결합해 키워드·질문형 쿼리에 최적화된 결과를 제공하고 접근 권한을 반영합니다."
       },
       {
-        name: "Flow Engine",
+        name: "AI 요약 & 업무 생성",
         description:
-          "캘린더 이벤트를 트리거로 삼아 자동화를 확장하고 팀 내 공유 템플릿을 제공합니다."
+          "회의록과 채팅을 요약하고 정확도 70% 이상을 목표로 실행 가능한 To-Do와 로드맵을 자동 도출합니다."
       },
       {
-        name: "Block-DB",
+        name: "프로젝트 그래프 & 리포트",
         description:
-          "연결된 데이터 블록으로 프로젝트, 태스크, 리소스를 유연하게 매핑합니다."
+          "문서·사람·업무 관계를 시각화하고 리더를 위한 감정 피드백과 리스크 리포트를 제공합니다."
       }
     ]
   },
   en: {
-    eyebrow: "Project",
-    name: "Project Palette",
+    eyebrow: "Product Overview",
+    name: "Project Flow",
     summary:
-      "An engine that unifies calendar events, voice input, and automation recipes into a block data OS to automate operations.",
-    differentiatorHeading: "Why it stands out",
+      "A work OS that ingests conversations, documents, and files, then lets AI organize, classify, and summarize them for instant execution.",
+    differentiatorHeading: "What makes Project Flow different",
     differentiator:
-      "Rather than a UI tool, it is engineered with time context and automation at the core to support advanced repeatable work.",
+      "A continually learning context graph paired with an AI automation engine removes manual sorting and delivers actionable insight out of the box.",
     modules: [
       {
-        name: "1MP (One-Minute Planner)",
+        name: "Data Hub & Auto Organization",
         description:
-          "Combines voice commands and text input to assemble plans in under a minute and schedule them automatically."
+          "Ingests Slack, Notion, Drive, and email data, deduplicates with SHA-256 and SimHash, and enriches everything with AI tagging."
       },
       {
-        name: "ZIC (Zero-Input Capture)",
+        name: "Hybrid AI Retrieval",
         description:
-          "Delivers a conversational capture experience that needs no clean-up afterward."
+          "Combines BM25 with semantic search to handle keyword and natural language queries while respecting access control."
       },
       {
-        name: "Flow Engine",
+        name: "AI Summaries & Work Creation",
         description:
-          "Expands automation with calendar events as triggers and provides shared templates across the team."
+          "Summarizes meetings and chats to surface To-Do items and roadmaps with a >=70% accuracy target."
       },
       {
-        name: "Block-DB",
+        name: "Project Graph & Reporting",
         description:
-          "Maps projects, tasks, and resources through connected data blocks for flexible orchestration."
+          "Visualizes relationships across documents, people, and tasks while delivering leader-ready sentiment and risk reports."
       }
     ]
   }
@@ -289,54 +292,60 @@ export type PreviousWorkContent = {
 
 export const previousWorkContent: Record<Language, PreviousWorkContent> = {
   ko: {
-    eyebrow: "이전 작업",
-    title: "실행력으로 증명한 운영 자동화 사례",
+    eyebrow: "로드맵",
+    title: "Phase별 마일스톤 & 목표",
     description:
-      "졸업 전시 운영부터 브랜드 리디자인까지, 복잡한 캘린더 기반 워크플로를 자동화한 경험을 공유합니다.",
-    ctaLabel: "자세히 보기 →",
+      "M0부터 M4까지 16주 로드맵으로 MVP, 권한 관리, 감정형 UX, 리포트 자동화를 단계적으로 달성합니다.",
+    ctaLabel: "세부 계획 보기 →",
     projects: [
       {
-        title: "2023 Graduation Expo Automation",
+        title: "M0 · MVP 프로토타입 (2주)",
         summary:
-          "행사 준비를 위해 일정, 자원, 커뮤니케이션을 연결한 운영 자동화 시스템 구축.",
-        href: "https://expo-automation.notion.site"
+          "파일 업로드, 자동 파싱, 요약, 초기 검색 경험 구축으로 핵심 가치를 검증합니다."
       },
       {
-        title: "Brand System Redesign",
+        title: "M1 · 의미 검색 & 그래프 (6주)",
         summary:
-          "리테일 프랜차이즈의 브랜드 자산과 트레이닝 모듈을 통합 블록 구조로 재편.",
-        href: "https://brand-ops.notion.site"
+          "RAG 파이프라인, 태깅 엔진, 프로젝트 그래프 시각화로 컨텍스트 이해도를 높입니다."
       },
       {
-        title: "Franchise Operations Console",
+        title: "M2 · 권한 & 외부 이관 (10주)",
         summary:
-          "캘린더 기반 현장 방문 스케줄링과 자동화 보고 워크플로를 엔지니어링."
+          "조직 권한, Slack/Notion Import, RLS 연동으로 보안과 확장성을 강화합니다."
+      },
+      {
+        title: "M3-M4 · 감정 UX & 리포트 자동화 (12~16주)",
+        summary:
+          "감성 피드백, 리더 보고서, 비즈니스 로드맵 자동화로 Copilot 경험을 완성합니다."
       }
     ]
   },
   en: {
-    eyebrow: "Previous Work",
-    title: "Operational automation proven by execution",
+    eyebrow: "Roadmap",
+    title: "Milestones & Focus by Phase",
     description:
-      "From graduation expos to brand redesign, we automate complex calendar-based workflows and share the outcomes.",
-    ctaLabel: "View details →",
+      "A 16-week path from M0 to M4 covering MVP validation, permissions, empathetic UX, and automated reporting.",
+    ctaLabel: "View detailed plan →",
     projects: [
       {
-        title: "2023 Graduation Expo Automation",
+        title: "M0 · MVP Prototype (2 weeks)",
         summary:
-          "Built an operating automation system that connects schedules, resources, and communications for event prep.",
-        href: "https://expo-automation.notion.site"
+          "Validate core value with file ingest, auto parsing, summaries, and an initial search experience."
       },
       {
-        title: "Brand System Redesign",
+        title: "M1 · Semantic Search & Graph (6 weeks)",
         summary:
-          "Reorganized brand assets and training modules for a retail franchise into an integrated block structure.",
-        href: "https://brand-ops.notion.site"
+          "Strengthen context understanding with RAG pipelines, tagging engine, and project graph visualization."
       },
       {
-        title: "Franchise Operations Console",
+        title: "M2 · Permissions & Imports (10 weeks)",
         summary:
-          "Engineered calendar-driven field scheduling and automated reporting workflows."
+          "Add org-level controls, Slack/Notion import, and RLS integration to secure and scale usage."
+      },
+      {
+        title: "M3-M4 · Empathetic UX & Reporting (12-16 weeks)",
+        summary:
+          "Deliver sentiment-aware feedback, leadership reports, and automated business roadmaps to complete the copilot experience."
       }
     ]
   }
@@ -349,21 +358,21 @@ export type FooterContent = {
 
 export const footerContent: Record<Language, FooterContent> = {
   ko: {
-    tagline: "캘린더 퍼스트 · 제로 입력 · 자동화 빌더팀",
+    tagline: "AI가 정리하는 업무 Copilot OS · Project Flow",
     links: [
-      { label: "이메일", href: "mailto:hello@projectpalette.team" },
-      { label: "GitHub", href: "https://github.com/project-palette" },
-      { label: "Notion", href: "https://palette.notion.site" },
-      { label: "LinkedIn", href: "https://linkedin.com/company/projectpalette" }
+      { label: "이메일", href: "mailto:product@flow.ai" },
+      { label: "GitHub", href: "https://github.com/project-flow" },
+      { label: "Notion", href: "https://flow.notion.site" },
+      { label: "LinkedIn", href: "https://linkedin.com/company/projectflow" }
     ]
   },
   en: {
-    tagline: "Calendar-first · Zero-input · Automation Builder Team",
+    tagline: "AI-organized workplace copilot · Project Flow",
     links: [
-      { label: "Email", href: "mailto:hello@projectpalette.team" },
-      { label: "GitHub", href: "https://github.com/project-palette" },
-      { label: "Notion", href: "https://palette.notion.site" },
-      { label: "LinkedIn", href: "https://linkedin.com/company/projectpalette" }
+      { label: "Email", href: "mailto:product@flow.ai" },
+      { label: "GitHub", href: "https://github.com/project-flow" },
+      { label: "Notion", href: "https://flow.notion.site" },
+      { label: "LinkedIn", href: "https://linkedin.com/company/projectflow" }
     ]
   }
 };
