@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
 import {
@@ -35,15 +36,28 @@ export function TeamSection({ language }: TeamSectionProps) {
               transition={{ delay: index * 0.15 }}
               className="flex h-full flex-col gap-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-surface/80 to-surface/40 p-6 backdrop-blur-xl"
             >
-              <div className="flex items-center gap-4">
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20 text-lg font-semibold text-accent">
-                  {member.name
-                    .split(" ")
-                    .map((part) => part[0])
-                    .join("")}
+              <div>
+                <div className="relative h-48 w-full overflow-hidden rounded-3xl bg-accent/10">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 320px"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center text-4xl font-semibold text-accent">
+                      {member.name
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")}
+                    </div>
+                  )}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 </div>
-                <div className="flex flex-col">
-                  <h3 className="text-lg font-semibold">{member.name}</h3>
+                <div className="mt-4 flex flex-col">
+                  <h3 className="text-xl font-semibold">{member.name}</h3>
                   <span className="text-sm text-muted">{member.role}</span>
                 </div>
               </div>

@@ -27,6 +27,7 @@ export type Language = "ko" | "en";
 
 export type HeroContent = {
   badge: string;
+  title: string;
   subtitle: string;
   description: string;
   ctas: Link[];
@@ -40,41 +41,44 @@ export type HeroContent = {
 export const heroContent: Record<Language, HeroContent> = {
   ko: {
     badge: "Project Flow",
-    subtitle: "AI가 대화·문서·파일을 스스로 정리하는 업무 Copilot OS",
+    title: "정리하지 않아도 정리되는 하루,",
+    subtitle:
+      "AI 노트 & 업무 코파일럿",
     description:
-      "모든 대화·문서·파일이 한 곳에 모이고, AI가 이를 자동 정리·분류·요약해 스타트업이 즉시 활용할 수 있는 AI 기반 업무 OS입니다.",
+      "파일·링크·음성·스크린샷을 AI가 자동으로 정리·요약·추천해 개인의 흐름을 지키고 팀 협업까지 확장합니다.",
     ctas: [
       { label: "문의하기", href: "mailto:product@flow.ai" },
-      { label: "프로덕트 개요 보기", href: "#project" }
+      { label: "PRD 살펴보기", href: "#project" }
     ],
-    highlightLabel: "AI Copilot",
-    highlightTitle: "Zero-overhead Work OS",
+    highlightLabel: "핵심 가치",
+    highlightTitle: "Personal-First Work OS",
     highlightItems: [
-      "모든 채널 데이터 자동 수집",
-      "AI 정리·분류·요약",
-      "실행 가능한 To-Do와 리포트"
+      "Zero-Input Capture",
+      "PARA & Personal Kanban 자동화",
+      "Actionable Insight"
     ],
-    highlightMetaPrimary: "10인 이하 스타트업 팀을 위한 자율형 업무 보조",
-    highlightMetaSecondary: "한·영 지원 · Slack·Notion 연동 준비"
+    highlightMetaPrimary: "기록 피로 없이 하루를 자동으로 정리",
+    highlightMetaSecondary: "로컬 우선 · E2E 암호화"
   },
   en: {
     badge: "Project Flow",
-    subtitle: "AI workplace copilot that keeps conversations, docs, and files organized.",
+    title: "A day that organizes itself,",
+    subtitle: "AI note & work copilot",
     description:
-      "An AI-native work OS where every conversation, document, and file lands in one place, is auto-organized, summarized, and ready for startup teams to act on instantly.",
+      "AI automatically organizes, summarizes, and recommends files, links, audio, and screenshots so your flow expands from personal work to team collaboration.",
     ctas: [
       { label: "Contact Us", href: "mailto:product@flow.ai" },
-      { label: "Explore Product Overview", href: "#project" }
+      { label: "Review the PRD", href: "#project" }
     ],
-    highlightLabel: "AI Copilot",
-    highlightTitle: "Zero-overhead Work OS",
+    highlightLabel: "Core Value",
+    highlightTitle: "Personal-First Work OS",
     highlightItems: [
-      "Unified data intake",
-      "Automated organization & summarization",
-      "Actionable To-Do and reporting"
+      "Zero-input capture",
+      "PARA & personal kanban automation",
+      "Actionable insight"
     ],
-    highlightMetaPrimary: "Designed for sub-10 member startup teams",
-    highlightMetaSecondary: "Bilingual experience · Slack & Notion ready"
+    highlightMetaPrimary: "Automates your day without capture fatigue",
+    highlightMetaSecondary: "Local-first · E2E encryption"
   }
 };
 
@@ -88,24 +92,24 @@ export type MissionContent = {
 export const missionContent: Record<Language, MissionContent> = {
   ko: {
     eyebrow: "프로젝트 미션",
-    headline: "AI가 알아서 정리하고 연결하는 업무 환경",
+    headline: "흩어진 하루를 자동으로 정리하는 Personal-First AI OS",
     description:
-      "Project Flow가 해결하려는 핵심 문제와 설계 철학을 세 가지 진술로 정리했습니다.",
+      "Project Flow PRD가 집중하는 핵심 목표와 설계 원칙입니다.",
     statements: [
-      "Slack, Notion, Drive, 카톡, 이메일에 흩어진 정보를 하나의 컨텍스트 그래프로 통합합니다.",
-      "AI가 문서와 대화를 자동으로 정리·요약해 팀이 겪는 정리 부담을 제거합니다.",
-      "업무 맥락을 이해한 Copilot이 실행 가능한 인사이트와 로드맵을 지속적으로 제안합니다."
+      "Zero-Overhead Input으로 파일·링크·음성·스크린샷 등을 수집하고 정리된 상태로 저장합니다.",
+      "PARA와 Personal Kanban을 결합해 개인의 사고 흐름과 패턴을 시각화합니다.",
+      "개인 경험을 팀 Workspace로 확장해 Daily Brief와 Next Action을 자동으로 제안합니다."
     ]
   },
   en: {
     eyebrow: "Mission",
-    headline: "An AI workspace that organizes and connects itself",
+    headline: "A personal-first AI OS that organizes every fragmented day",
     description:
-      "We express the problems we tackle and our product philosophy in three statements.",
+      "This PRD focuses our goals into three design principles.",
     statements: [
-      "Unify fragmented Slack, Notion, Drive, chat, and email data into a single context graph.",
-      "Remove the burden of organizing by letting AI structure and summarize documents and conversations automatically.",
-      "Deliver continuous, actionable insights and roadmaps through a context-aware copilot."
+      "Collect files, links, audio, and screenshots with zero-overhead input and keep them organized from the start.",
+      "Combine PARA with personal kanban to visualize thinking patterns and daily rhythms.",
+      "Grow the personal workspace into team collaboration with automated daily briefs and next actions."
     ]
   }
 };
@@ -119,97 +123,142 @@ export type SectionCopy = {
 export const teamSectionCopy: Record<Language, SectionCopy> = {
   ko: {
     eyebrow: "팀 소개",
-    title: "AI 업무 Copilot을 현실로 만드는 빌더팀",
+    title: "AI Work OS를 현실로 만드는 팀",
     description:
-      "데이터 아키텍처, LLM 오케스트레이션, 감성 UX를 결합해 자율형 업무 OS를 설계합니다."
+      "입력 자동화, 감정 인사이트, AI 오케스트레이션을 결합해 개인에서 팀으로 확장되는 경험을 설계합니다."
   },
   en: {
     eyebrow: "Team",
-    title: "Builders shipping the AI workplace copilot",
+    title: "The team bringing the AI Work OS to life",
     description:
-      "We combine data architecture, LLM orchestration, and empathetic UX to craft a self-organizing work OS."
+      "We combine capture automation, emotional insight, and AI orchestration to craft experiences that scale from individuals to teams."
   }
 };
 
 export const teamMembers: Record<Language, TeamMember[]> = {
   ko: [
     {
-      name: "Hyeok Su Lee",
+      name: "Hyeoksu Lee",
       role: "프로덕트 오너 & AI 전략",
+      image: "/images/team/hyeoksu.png",
       focus:
-        "프로젝트 비전, 데이터 모델, AI 오케스트레이션 아키텍처를 설계하며 핵심 로드맵을 이끕니다.",
-      technologies: ["Next.js", "Supabase", "OpenAI API", "pgvector"],
+        "감성과 기술이 공존하는 AI 퍼스널 OS·브랜드 경험을 디자인합니다. 일상 속 데이터 흐름을 자동화하고, AI가 사고하고 연결하는 시스템을 구축합니다.",
+      technologies: [
+        "AI & Automation",
+        "Backend / Frontend",
+        // "Frontend / Interaction",
+        "Design & System Thinking",
+        // "BullMQ"
+      ],
       links: [
-        { label: "LinkedIn", href: "https://linkedin.com/in/hyeoksu" },
-        { label: "GitHub", href: "https://github.com/hyeoksu" },
-        { label: "Notion", href: "https://hyeoksu.notion.site" }
+        { label: "Portfolio", href: "https://hyeoksu1234.github.io/portfolio_website/projects.html" },
+        { label: "CV/Resume", href: "https://www.notion.so/Hyeoksu-LEE-Brand-Interaction-Designer-ac9f3cc11b324e288fbdc8eedeb92139?source=copy_link" }
       ]
     },
     {
       name: "Yoonsu Lee",
       role: "AI 감성 UX 디자이너",
+      image: "/images/team/yoonsu.png",
       focus:
-        "Emotion-driven UX와 Human-centered AI 연구를 바탕으로 공감형 인터페이스와 브랜드 상호작용을 설계합니다.",
+        "Emotion-driven UX와 Human-centered AI 연구로 감정 리듬 기반 인터페이스와 온보딩 경험을 설계합니다.",
       technologies: [
         "AI Sensitivity Design",
         "Emotion-driven UX",
-        "Material Research",
+        "Emotion Rhythm Research",
         "Brand Interaction"
       ],
-      links: []
+      links: [
+        { label: "Portfolio", href: "https://www.behance.net/gallery/237239849/_" },
+        { label: "CV/Resume", href: "https://www.notion.so/Yoonsu-Lee-Omnivorous-Designer-295f30904ec5808893a0ff2be0731417?source=copy_link" }
+      ]
     },
     {
       name: "Gayoung Joung",
       role: "AI 네이티브 PM & 마케팅 빌더",
+      image: "/images/team/gayoung.png",
       focus:
-        "글로벌 코빌딩 경험과 데이터 기반 마케팅 역량으로 AI-Native 접근법을 제품·프론트엔드·커뮤니케이션에 연결합니다.",
+        "코호트 실험과 데이터 기반 마케팅으로 베타 고객 여정을 설계하고 커뮤니케이션을 정렬합니다.",
       technologies: [
         "Prompt Engineering",
         "UI/UX",
         "Data-driven Marketing",
-        "Frontend"
+        "Lifecycle Analytics"
       ],
-      links: []
+      links: [
+        { label: "Portfolio", href: "https://extreme-athlete-4ad.notion.site/MVP-293311331e44805bbbc8efff82ffab15?source=copy_link" },
+        { label: "CV/Resume", href: "https://extreme-athlete-4ad.notion.site/MVP-293311331e44805bbbc8efff82ffab15?source=copy_link" }
+
+      ]
     }
   ],
   en: [
     {
       name: "Hyeok Su Lee",
       role: "Product Owner & AI Strategist",
+      image: "/images/team/hyeoksu.png",
       focus:
-        "Designs the product vision, data models, and AI orchestration architecture while steering the roadmap.",
-      technologies: ["Next.js", "Supabase", "OpenAI API", "pgvector"],
+        "Designs an AI personal OS and brand experience where emotion and technology coexist, automating everyday data flows and building systems that let AI think and connect.",
+      technologies: [
+        "AI & Automation",
+        "Backend / Frontend",
+        "Design & System Thinking"
+      ],
       links: [
-        { label: "LinkedIn", href: "https://linkedin.com/in/hyeoksu" },
-        { label: "GitHub", href: "https://github.com/hyeoksu" },
-        { label: "Notion", href: "https://hyeoksu.notion.site" }
+        {
+          label: "Portfolio",
+          href: "https://hyeoksu1234.github.io/portfolio_website/projects.html"
+        },
+        {
+          label: "CV/Resume",
+          href: "https://www.notion.so/Hyeoksu-LEE-Brand-Interaction-Designer-ac9f3cc11b324e288fbdc8eedeb92139?source=copy_link"
+        }
       ]
     },
     {
       name: "Yoonsu Lee",
       role: "AI Sensitivity UX Designer",
+      image: "/images/team/yoonsu.png",
       focus:
-        "Designs empathetic interfaces and brand interactions grounded in emotion-driven UX and human-centered AI research.",
+        "Designs emotion-rhythm interfaces and onboarding experiences grounded in emotion-driven UX and human-centered AI research.",
       technologies: [
         "AI Sensitivity Design",
         "Emotion-driven UX",
-        "Material Research",
+        "Emotion Rhythm Research",
         "Brand Interaction"
       ],
-      links: []
+      links: [
+        {
+          label: "Portfolio",
+          href: "https://www.behance.net/gallery/237239849/_"
+        },
+        {
+          label: "CV/Resume",
+          href: "https://www.notion.so/Yoonsu-Lee-Omnivorous-Designer-295f30904ec5808893a0ff2be0731417?source=copy_link"
+        }
+      ]
     },
     {
       name: "Gayoung Joung",
       role: "AI-native PM & Marketing Builder",
+      image: "/images/team/gayoung.png",
       focus:
-        "Connects global co-building, outbound growth, and data-driven marketing to ship AI-native product, frontend, and communication experiences.",
+        "Designs beta customer journeys with cohort experiments and data-driven marketing to align product and communication.",
       technologies: [
         "Prompt Engineering",
         "UI/UX",
         "Data-driven Marketing",
-        "Frontend"
+        "Lifecycle Analytics"
       ],
-      links: []
+      links: [
+        {
+          label: "Portfolio",
+          href: "https://extreme-athlete-4ad.notion.site/MVP-293311331e44805bbbc8efff82ffab15?source=copy_link"
+        },
+        {
+          label: "CV/Resume",
+          href: "https://extreme-athlete-4ad.notion.site/MVP-293311331e44805bbbc8efff82ffab15?source=copy_link"
+        }
+      ]
     }
   ]
 };
@@ -228,30 +277,30 @@ export const projectOverview: Record<Language, ProjectOverviewContent> = {
     eyebrow: "제품 개요",
     name: "Project Flow",
     summary:
-      "대화·문서·파일을 자동 수집하고 AI가 정리·분류·요약해 팀이 즉시 실행할 수 있는 업무 OS입니다.",
-    differentiatorHeading: "Project Flow가 제공하는 차별점",
+      "생각·링크·음성·스크린샷을 자동 수집하고 PARA + Personal Kanban 기반으로 정리해 실행 가능한 인사이트를 제공하는 Personal-First AI 노트 & Copilot OS입니다.",
+    differentiatorHeading: "핵심 제공 가치",
     differentiator:
-      "지속적으로 학습하는 컨텍스트 그래프와 AI 자동화 엔진을 결합해 정리 부담 없이 실행 가능한 인사이트를 제공합니다.",
+      "Zero-Input Capture, Contextual Memory, Emotion Rhythm 분석을 결합해 개인의 흐름을 방해하지 않고 행동으로 연결합니다.",
     modules: [
       {
-        name: "데이터 허브 & 자동 정리",
+        name: "Universal Inbox & Capture",
         description:
-          "Slack, Notion, Drive, 이메일을 수집하고 SHA-256과 SimHash로 중복을 관리하며 AI가 태깅과 구조화를 수행합니다."
+          "macOS/Windows 캡처 앱, iOS 공유 시트, Chrome 확장을 통해 모든 입력을 로컬 우선으로 수집하고 암호화합니다."
       },
       {
-        name: "하이브리드 AI 검색",
+        name: "Auto Organization Engine",
         description:
-          "BM25와 의미 검색을 결합해 키워드·질문형 쿼리에 최적화된 결과를 제공하고 접근 권한을 반영합니다."
+          "Whisper, DocTR, llama-parse, GPT-4o-mini를 활용해 요약·태깅·PARA 분류를 자동화하고 중복을 제거합니다."
       },
       {
-        name: "AI 요약 & 업무 생성",
+        name: "Contextual Memory & Emotion",
         description:
-          "회의록과 채팅을 요약하고 정확도 70% 이상을 목표로 실행 가능한 To-Do와 로드맵을 자동 도출합니다."
+          "개인 메타데이터와 감정 신뢰도 스코어를 학습해 Daily Brief, Recap Report, 감정 리듬 지표를 생성합니다."
       },
       {
-        name: "프로젝트 그래프 & 리포트",
+        name: "Next Action & Focus Loop",
         description:
-          "문서·사람·업무 관계를 시각화하고 리더를 위한 감정 피드백과 리스크 리포트를 제공합니다."
+          "추천 할 일, 리마인더, Focus Mode를 통해 기록을 행동으로 전환하고 팀 협업으로 확장합니다."
       }
     ]
   },
@@ -259,30 +308,30 @@ export const projectOverview: Record<Language, ProjectOverviewContent> = {
     eyebrow: "Product Overview",
     name: "Project Flow",
     summary:
-      "A work OS that ingests conversations, documents, and files, then lets AI organize, classify, and summarize them for instant execution.",
-    differentiatorHeading: "What makes Project Flow different",
+      "A personal-first AI note and copilot OS that captures thoughts, links, audio, and screenshots, then organizes them with PARA + personal kanban for actionable insight.",
+    differentiatorHeading: "Core Product Value",
     differentiator:
-      "A continually learning context graph paired with an AI automation engine removes manual sorting and delivers actionable insight out of the box.",
+      "Zero-input capture, contextual memory, and emotion rhythm analysis connect flows to action without disrupting people.",
     modules: [
       {
-        name: "Data Hub & Auto Organization",
+        name: "Universal Inbox & Capture",
         description:
-          "Ingests Slack, Notion, Drive, and email data, deduplicates with SHA-256 and SimHash, and enriches everything with AI tagging."
+          "Mac/Windows capture apps, iOS share sheet, and Chrome extension collect every input locally first with encryption."
       },
       {
-        name: "Hybrid AI Retrieval",
+        name: "Auto Organization Engine",
         description:
-          "Combines BM25 with semantic search to handle keyword and natural language queries while respecting access control."
+          "Whisper, DocTR, llama-parse, and GPT-4o-mini automate summarization, tagging, PARA classification, and deduplication."
       },
       {
-        name: "AI Summaries & Work Creation",
+        name: "Contextual Memory & Emotion",
         description:
-          "Summarizes meetings and chats to surface To-Do items and roadmaps with a >=70% accuracy target."
+          "Learns personal metadata and emotion confidence to power daily briefs, recap reports, and rhythm insights."
       },
       {
-        name: "Project Graph & Reporting",
+        name: "Next Action & Focus Loop",
         description:
-          "Visualizes relationships across documents, people, and tasks while delivering leader-ready sentiment and risk reports."
+          "Transforms notes into suggested tasks, reminders, and focus sessions that scale into team collaboration."
       }
     ]
   }
@@ -299,59 +348,59 @@ export type PreviousWorkContent = {
 export const previousWorkContent: Record<Language, PreviousWorkContent> = {
   ko: {
     eyebrow: "로드맵",
-    title: "Phase별 마일스톤 & 목표",
+    title: "단계별 베타 목표",
     description:
-      "M0부터 M4까지 16주 로드맵으로 MVP, 권한 관리, 감정형 UX, 리포트 자동화를 단계적으로 달성합니다.",
-    ctaLabel: "세부 계획 보기 →",
+      "P0부터 T1까지 16주 로드맵으로 캡처 자동화에서 협업 OS까지 확장합니다.",
+    ctaLabel: "로드맵 상세 보기 →",
     projects: [
       {
-        title: "M0 · MVP 프로토타입 (2주)",
+        title: "P0 · MVP 프로토타입 (2주)",
         summary:
-          "파일 업로드, 자동 파싱, 요약, 초기 검색 경험 구축으로 핵심 가치를 검증합니다."
+          "macOS/Windows 캡처, iOS 공유 시트, Chrome 확장으로 Zero-Input Capture 경험을 검증합니다."
       },
       {
-        title: "M1 · 의미 검색 & 그래프 (6주)",
+        title: "P1 · 개인 생산성 강화 (+4주)",
         summary:
-          "RAG 파이프라인, 태깅 엔진, 프로젝트 그래프 시각화로 컨텍스트 이해도를 높입니다."
+          "Daily Brief, Next Action Lite, Focus Mode로 개인 생산성과 감정 루틴을 강화합니다."
       },
       {
-        title: "M2 · 권한 & 외부 이관 (10주)",
+        title: "P2 · 감정 리포트 & Graph (+4주)",
         summary:
-          "조직 권한, Slack/Notion Import, RLS 연동으로 보안과 확장성을 강화합니다."
+          "감정 신뢰도 대시보드와 Graph Lite로 Contextual Memory와 감정 리듬을 시각화합니다."
       },
       {
-        title: "M3-M4 · 감정 UX & 리포트 자동화 (12~16주)",
+        title: "T0-T1 · 팀 협업 모드 (+12주)",
         summary:
-          "감성 피드백, 리더 보고서, 비즈니스 로드맵 자동화로 Copilot 경험을 완성합니다."
+          "공유 Workspace, 권한, 감사 로그, SSO로 팀 협업과 보안을 확장합니다."
       }
     ]
   },
   en: {
     eyebrow: "Roadmap",
-    title: "Milestones & Focus by Phase",
+    title: "Beta milestones by phase",
     description:
-      "A 16-week path from M0 to M4 covering MVP validation, permissions, empathetic UX, and automated reporting.",
-    ctaLabel: "View detailed plan →",
+      "A 16-week plan from P0 to T1 scaling from capture automation to a collaboration OS.",
+    ctaLabel: "View roadmap details →",
     projects: [
       {
-        title: "M0 · MVP Prototype (2 weeks)",
+        title: "P0 · MVP Prototype (2 weeks)",
         summary:
-          "Validate core value with file ingest, auto parsing, summaries, and an initial search experience."
+          "Validate zero-input capture with desktop inbox, iOS share sheet, and Chrome extension."
       },
       {
-        title: "M1 · Semantic Search & Graph (6 weeks)",
+        title: "P1 · Personal productivity (+4 weeks)",
         summary:
-          "Strengthen context understanding with RAG pipelines, tagging engine, and project graph visualization."
+          "Ship daily brief, next action lite, and focus mode to deepen personal productivity and emotion routines."
       },
       {
-        title: "M2 · Permissions & Imports (10 weeks)",
+        title: "P2 · Emotion reports & graph (+4 weeks)",
         summary:
-          "Add org-level controls, Slack/Notion import, and RLS integration to secure and scale usage."
+          "Launch emotion confidence dashboards and graph lite to visualize contextual memory and rhythms."
       },
       {
-        title: "M3-M4 · Empathetic UX & Reporting (12-16 weeks)",
+        title: "T0-T1 · Team collaboration (+12 weeks)",
         summary:
-          "Deliver sentiment-aware feedback, leadership reports, and automated business roadmaps to complete the copilot experience."
+          "Upgrade shared workspaces, permissions, audit logs, and SSO for secure team expansion."
       }
     ]
   }
@@ -364,7 +413,7 @@ export type FooterContent = {
 
 export const footerContent: Record<Language, FooterContent> = {
   ko: {
-    tagline: "AI가 정리하는 업무 Copilot OS · Project Flow",
+    tagline: "Personal-First AI Note & Copilot OS · Project Flow",
     links: [
       { label: "이메일", href: "mailto:product@flow.ai" },
       { label: "GitHub", href: "https://github.com/project-flow" },
@@ -373,7 +422,7 @@ export const footerContent: Record<Language, FooterContent> = {
     ]
   },
   en: {
-    tagline: "AI-organized workplace copilot · Project Flow",
+    tagline: "Personal-first AI note & copilot OS · Project Flow",
     links: [
       { label: "Email", href: "mailto:product@flow.ai" },
       { label: "GitHub", href: "https://github.com/project-flow" },

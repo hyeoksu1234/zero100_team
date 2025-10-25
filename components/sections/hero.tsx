@@ -29,9 +29,12 @@ export function HeroSection({ language }: HeroSectionProps) {
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.4em] text-accent backdrop-blur">
             {content.badge}
           </span>
-          <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-            {content.subtitle}
+          <h1 className="text-5xl font-semibold leading-tight md:text-6xl">
+            {content.title}
           </h1>
+          <p className="text-3xl font-semibold leading-tight text-white md:text-4xl">
+            {content.subtitle}
+          </p>
           <p className="max-w-xl text-lg text-white/70 md:text-xl">
             {content.description}
           </p>
