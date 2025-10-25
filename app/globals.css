@@ -7,13 +7,13 @@
 }
 
 body {
-  @apply bg-background text-white antialiased;
+  @apply bg-background text-foreground antialiased;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
 
 a {
-  @apply text-accent hover:text-accent-foreground transition-colors;
+  @apply text-accent hover:text-foreground transition-colors;
 }
 
 section {

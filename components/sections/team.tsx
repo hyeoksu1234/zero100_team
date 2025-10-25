@@ -42,10 +42,10 @@ export function TeamSection({ language }: TeamSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ delay: index * 0.15 }}
-              className="flex h-full flex-col gap-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-surface/80 to-surface/40 p-6 backdrop-blur-xl"
+              className="flex h-full flex-col gap-6 rounded-3xl border border-border bg-surface p-6 shadow-lg"
             >
               <div>
-                <div className="relative h-48 w-full overflow-hidden rounded-3xl bg-accent/10">
+                <div className="relative h-48 w-full overflow-hidden rounded-3xl bg-background">
                   {member.image ? (
                     <Image
                       src={assetBasePath ? `${assetBasePath}${member.image}` : member.image}
@@ -62,7 +62,7 @@ export function TeamSection({ language }: TeamSectionProps) {
                         .join("")}
                     </div>
                   )}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-black/5 to-transparent" />
                 </div>
                 <div className="mt-4 flex flex-col">
                   <h3 className="text-xl font-semibold">{member.name}</h3>
@@ -70,7 +70,7 @@ export function TeamSection({ language }: TeamSectionProps) {
                 </div>
               </div>
 
-              <p className="text-sm leading-relaxed text-white/70">
+              <p className="text-sm leading-relaxed text-muted">
                 {member.focus}
               </p>
 
@@ -78,7 +78,7 @@ export function TeamSection({ language }: TeamSectionProps) {
                 {member.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70"
+                    className="rounded-full border border-border bg-background px-3 py-1 text-xs text-muted"
                   >
                     {tech}
                   </span>

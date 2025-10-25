@@ -43,10 +43,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko" className="dark">
       <body
-        className={`${inter.variable} font-sans bg-background text-white selection:bg-accent selection:text-accent-foreground`}
+        className={`${inter.variable} font-sans bg-background text-foreground selection:bg-accent selection:text-accent-foreground`}
       >
         <div className="relative min-h-screen overflow-x-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,163,163,0.18),transparent_55%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(107,114,128,0.15),transparent_55%)]" />
           <main className="relative">{children}</main>
         </div>
       </body>

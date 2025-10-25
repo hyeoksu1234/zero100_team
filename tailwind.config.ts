@@ -9,19 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0B0B0D",
-        surface: "#161618",
+        background: "#F4F5F7",
+        surface: "#FFFFFF",
         accent: {
-          DEFAULT: "#A3A3A3",
-          foreground: "#E5E7EB"
+          DEFAULT: "#4B5563",
+          foreground: "#F9FAFB"
         },
-        muted: "#9CA3AF"
+        foreground: "#1F2937",
+        muted: "#6B7280",
+        border: "#D1D5DB"
       },
       fontFamily: {
         sans: ["var(--font-pretendard)", "var(--font-inter)", "system-ui"]
       },
       boxShadow: {
-        glow: "0 0 50px rgba(163, 163, 163, 0.25)"
+        glow: "0 0 35px rgba(107, 114, 128, 0.2)"
       }
     }
   },

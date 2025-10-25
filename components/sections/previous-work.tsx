@@ -38,10 +38,10 @@ export function PreviousWorkSection({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: index * 0.1 }}
-              className="flex h-full flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-6"
+              className="flex h-full flex-col gap-4 rounded-3xl border border-border bg-surface p-6 shadow-md"
             >
               <h3 className="text-lg font-semibold">{work.title}</h3>
-              <p className="text-sm text-white/70">{work.summary}</p>
+              <p className="text-sm text-muted">{work.summary}</p>
               {work.href ? (
                 <Link
                   href={work.href}

@@ -27,12 +27,12 @@ export function MissionSection({ language }: MissionSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: index * 0.1 }}
-              className="flex h-full flex-col gap-3 rounded-2xl border border-white/10 bg-surface/60 p-6 backdrop-blur-xl"
+              className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-surface p-6 shadow-md"
             >
               <span className="text-sm font-semibold text-accent">
                 0{index + 1}
               </span>
-              <p className="text-base text-white/80">{statement}</p>
+              <p className="text-base text-muted">{statement}</p>
             </motion.article>
           ))}
         </div>

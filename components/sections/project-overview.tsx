@@ -27,12 +27,12 @@ export function ProjectOverviewSection({
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="mx-auto mt-10 max-w-4xl rounded-[32px] border border-accent/30 bg-gradient-to-br from-accent/10 via-surface/70 to-surface/40 p-8 shadow-glow"
+          className="mx-auto mt-10 max-w-4xl rounded-[32px] border border-border bg-surface p-8 shadow-lg"
         >
-          <h3 className="text-xl font-semibold text-accent-foreground">
+          <h3 className="text-xl font-semibold text-accent">
             {content.differentiatorHeading}
           </h3>
-          <p className="mt-3 text-sm text-white/75">
+          <p className="mt-3 text-sm text-muted">
             {content.differentiator}
           </p>
         </motion.div>
@@ -45,7 +45,7 @@ export function ProjectOverviewSection({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: index * 0.1 }}
-              className="flex h-full flex-col gap-3 rounded-3xl border border-white/10 bg-surface/70 p-6 backdrop-blur-xl"
+              className="flex h-full flex-col gap-3 rounded-3xl border border-border bg-surface p-6 shadow-md"
             >
               <div className="flex items-center justify-between">
                 <h4 className="text-lg font-semibold">{module.name}</h4>
@@ -53,7 +53,7 @@ export function ProjectOverviewSection({
                   Module 0{index + 1}
                 </span>
               </div>
-              <p className="text-sm text-white/70">{module.description}</p>
+              <p className="text-sm text-muted">{module.description}</p>
             </motion.article>
           ))}
         </div>

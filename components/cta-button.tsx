@@ -18,8 +18,8 @@ export function CTAButton({
     "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all";
   const variantStyles =
     variant === "primary"
-      ? "bg-accent text-background hover:text-background/80 shadow-glow"
-      : "border border-white/15 bg-transparent text-white hover:border-accent hover:text-accent";
+      ? "bg-accent text-accent-foreground hover:text-accent-foreground/80 shadow-glow"
+      : "border border-border bg-transparent text-foreground hover:border-accent hover:text-accent";
 
   return (
     <motion.div
@@ -33,4 +33,3 @@ export function CTAButton({
     </motion.div>
   );
 }
-
