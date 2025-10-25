@@ -10,6 +10,14 @@ import {
   type Language
 } from "@/data/content";
 
+const repoName = "zero100_team";
+const rawBasePath =
+  process.env.NEXT_PUBLIC_BASE_PATH ??
+  (process.env.NODE_ENV === "production" ? repoName : "");
+const assetBasePath = rawBasePath
+  ? `/${rawBasePath.replace(/^\/|\/$/g, "")}`
+  : "";
+
 type TeamSectionProps = {
   language: Language;
 };
@@ -40,7 +48,7 @@ export function TeamSection({ language }: TeamSectionProps) {
                 <div className="relative h-48 w-full overflow-hidden rounded-3xl bg-accent/10">
                   {member.image ? (
                     <Image
-                      src={member.image}
+                      src={assetBasePath ? `${assetBasePath}${member.image}` : member.image}
                       alt={member.name}
                       fill
                       className="object-cover"
