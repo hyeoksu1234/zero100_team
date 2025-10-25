@@ -9,7 +9,14 @@ const inter = Inter({
   display: "swap"
 });
 
+const defaultSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.NODE_ENV === "production"
+    ? "https://hyeoksu1234.github.io/zero100_team"
+    : "http://localhost:3002");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(defaultSiteUrl),
   title: "Project Palette — Builder Team Landing",
   description:
     "Introducing Project Palette: a builder team crafting calendar-first automation and a block data OS for AI Builderthon readiness.",
