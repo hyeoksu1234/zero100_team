@@ -161,10 +161,10 @@ export const teamMembers: Record<Language, TeamMember[]> = {
     },
     {
       name: "Yoonsu Lee",
-      role: "AI 감성 UX 디자이너",
+      role: "AI·UX 기반 감각 경험 디자이너",
       image: "/images/team/yoonsu.png",
       focus:
-        "Emotion-driven UX와 Human-centered AI 연구로 감정 리듬 기반 인터페이스와 온보딩 경험을 설계합니다.",
+        "Emotion-driven UX를 기반으로, 기술이 인간에게 닿는 방식을 감각적으로 설계합니다. 효율의 구조 속에서도 사람의 온도가 느껴지는 경험을 만듭니다.",
       technologies: [
         "AI Sensitivity Design",
         "Emotion-driven UX",
