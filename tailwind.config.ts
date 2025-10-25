@@ -9,19 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#050505",
-        surface: "#0F0F12",
+        background: "#0B0B0D",
+        surface: "#161618",
         accent: {
-          DEFAULT: "#8B5CF6",
-          foreground: "#F5F3FF"
+          DEFAULT: "#A3A3A3",
+          foreground: "#E5E7EB"
         },
-        muted: "#A1A1AA"
+        muted: "#9CA3AF"
       },
       fontFamily: {
         sans: ["var(--font-pretendard)", "var(--font-inter)", "system-ui"]
       },
       boxShadow: {
-        glow: "0 0 50px rgba(139, 92, 246, 0.35)"
+        glow: "0 0 50px rgba(163, 163, 163, 0.25)"
       }
     }
   },
@@ -29,4 +29,3 @@ const config: Config = {
 };
 
 export default config;
-

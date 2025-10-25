@@ -29,7 +29,7 @@ export type HeroContent = {
   badge: string;
   title: string;
   subtitle: string;
-  description: string;
+  description: string[];
   ctas: Link[];
   highlightLabel: string;
   highlightTitle: string;
@@ -44,8 +44,10 @@ export const heroContent: Record<Language, HeroContent> = {
     title: "정리하지 않아도 정리되는 하루,",
     subtitle:
       "AI 노트 & 업무 코파일럿",
-    description:
-      "파일·링크·음성·스크린샷을 AI가 자동으로 정리·요약·추천해 개인의 흐름을 지키고 팀 협업까지 확장합니다.",
+    description: [
+      "파일·링크·음성·스크린샷을 AI가 자동으로 정리·요약·추천해",
+      "개인의 흐름을 지키고 팀 협업까지 확장합니다."
+    ],
     ctas: [
       { label: "문의하기", href: "mailto:product@flow.ai" },
       { label: "PRD 살펴보기", href: "#project" }
@@ -64,8 +66,10 @@ export const heroContent: Record<Language, HeroContent> = {
     badge: "Project Flow",
     title: "A day that organizes itself,",
     subtitle: "AI note & work copilot",
-    description:
-      "AI automatically organizes, summarizes, and recommends files, links, audio, and screenshots so your flow expands from personal work to team collaboration.",
+    description: [
+      "AI automatically organizes, summarizes, and recommends files, links, audio, and screenshots",
+      "so your flow scales from personal work to team collaboration."
+    ],
     ctas: [
       { label: "Contact Us", href: "mailto:product@flow.ai" },
       { label: "Review the PRD", href: "#project" }

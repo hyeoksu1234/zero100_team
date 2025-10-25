@@ -25,7 +25,7 @@ export function LanguageToggle({ language, onChange }: LanguageToggleProps) {
             onClick={() => onChange(option.value)}
             className={`rounded-full px-3 py-1 font-medium transition-colors ${
               isActive
-                ? "bg-accent text-black shadow-sm"
+                ? "bg-accent text-background shadow-sm"
                 : "text-white/60 hover:text-white"
             }`}
             aria-pressed={isActive}

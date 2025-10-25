@@ -35,9 +35,13 @@ export function HeroSection({ language }: HeroSectionProps) {
           <p className="text-3xl font-semibold leading-tight text-white md:text-4xl">
             {content.subtitle}
           </p>
-          <p className="max-w-xl text-lg text-white/70 md:text-xl">
-            {content.description}
-          </p>
+          <div className="max-w-xl text-lg text-white/70 md:text-xl leading-relaxed">
+            {content.description.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </div>
           <div className="flex flex-col gap-4 sm:flex-row">
             <CTAButton
               href={content.ctas[0].href}
